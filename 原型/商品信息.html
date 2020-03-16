@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="wrap">
+				<div id="content">
+					<div class="crumbs">
+						<a class="pjax" href="index.html">首页</a>
+
+						<i></i>
+						<a class="pjax" href="find-1.html">图书、音像、电子书刊</a>
+
+						<i></i>
+						<a class="pjax" href="find-2.html">电子书刊</a>
+
+						<i></i>
+						<a class="pjax" href="find-3.html">电子书</a>
+
+					</div>
+					<script id="crumbs_tpl" type="text/html">
+						<a class="pjax" href="index.html">首页</a>
+						{{each item v}}
+						<i></i>
+						<a class="pjax" href="find-{{v.id}}.html">{{v.name}}</a>
+						{{/each}}
+					</script>
+					<div class="item">
+						<div class="album">
+							<div class="album-mid">
+								<img class="album-mid-img" alt="预览图" src="upload/image/2018-03/29/album_mid_0ee464165d0ead6a2b06eada2b0be5df.png">
+								<div class="album-mask" style="display: none; left: 175px; top: 15.5px;"></div>
+							</div>
+							<div class="album-small">
+								<div class="album-btn-left"></div>
+								<div class="album-list">
+									<ul>
+
+										<li class="album-curr"><img src="upload/image/2018-03/29/album_small_0ee464165d0ead6a2b06eada2b0be5df.png" alt="预览图"></li>
+
+									</ul>
+								</div>
+								<div class="album-btn-right"></div>
+							</div>
+							<div class="album-big" style="display: none;"><img class="album-big-img" alt="预览图" src="upload/image/2018-03/29/album_big_0ee464165d0ead6a2b06eada2b0be5df.png" style="left: -379px; top: -33.5686px;"></div>
+						</div>
+						<script id="album_tpl" type="text/html">
+							<div class="album-mid">
+								<img class="album-mid-img" alt="预览图">
+								<div class="album-mask"></div>
+							</div>
+							<div class="album-small">
+								<div class="album-btn-left"></div>
+								<div class="album-list">
+									<ul>
+										{{each item v}}
+										<li><img src="{{v}}" alt="预览图"></li>
+										{{/each}}
+									</ul>
+								</div>
+								<div class="album-btn-right"></div>
+							</div>
+							<div class="album-big"><img class="album-big-img" alt="预览图"></div>
+						</script>
+						<script src="js/jquery.album.js"></script>
+						<div class="item-info">
+							<h1>Java Web程序设计任务教程</h1>
+							<div class="item-info-sell">工业和信息化“十三五”人才培养规划教材</div>
+							<table>
+								<tbody>
+									<tr>
+										<th>售 价：</th>
+										<td><span class="item-info-price">¥56.00</span></td>
+									</tr>
+									<tr>
+										<th>累计销量：</th>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th>评 价：</th>
+										<td>0</td>
+									</tr>
+									<tr>
+										<th>配送至：</th>
+										<td>北京（免运费）</td>
+									</tr>
+									<tr>
+										<th>购买数量：</th>
+										<td>
+											<input type="button" value="-" class="item-num-sub">
+											<input type="text" value="1" id="item_num" class="item-num">
+											<input type="button" value="+" class="item-num-add"> （库存：
+											<span class="item-num-stock">100</span>）
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="item-info-button">
+											<a href="#" class="light">立即购买</a>
+											<a href="#" id="cart_add">加入购物车</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<script id="item_info_tpl" type="text/html">
+							<h1>{{item.title}}</h1>
+							<div class="item-info-sell">{{item.sell_point}}</div>
+							<table>
+								<tr>
+									<th>售 价：</th>
+									<td><span class="item-info-price">¥{{item.price}}</span></td>
+								</tr>
+								<tr>
+									<th>累计销量：</th>
+									<td>0</td>
+								</tr>
+								<tr>
+									<th>评 价：</th>
+									<td>0</td>
+								</tr>
+								<tr>
+									<th>配送至：</th>
+									<td>北京（免运费）</td>
+								</tr>
+								<tr>
+									<th>购买数量：</th>
+									<td>
+										<input type="button" value="-" class="item-num-sub">
+										<input type="text" value="1" id="item_num" class="item-num">
+										<input type="button" value="+" class="item-num-add"> （库存：
+										<span class="item-num-stock">{{item.num}}</span>）
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="item-info-button">
+										<a href="#" class="light">立即购买</a>
+										<a href="#" id="cart_add">加入购物车</a>
+									</td>
+								</tr>
+							</table>
+						</script>
+						<div class="item-line"></div>
+						<div class="item-ads">
+							<div class="item-ads-title">相关商品推荐</div>
+							<div class="item-ads-content">
+
+								<ul class="item-ads-item">
+									<li>
+										<a href="item-41.html" target="_blank">
+											<img src="upload/image/2018-03/29/pic_9c34269665d881bb78d9d5ed2f477d5a.png" alt="响应式Web开发项目教程（HTML5+CSS3+Bootstrap）">
+										</a>
+									</li>
+									<li class="item-ads-name">
+										<a href="upload/image/2018-03/29/pic_9c34269665d881bb78d9d5ed2f477d5a.png" target="_blank">响应式Web开发项目教程（HTML5+CSS3+Bootstrap）</a>
+									</li>
+									<li class="item-ads-price">¥42.00</li>
+								</ul>
+
+								<ul class="item-ads-item">
+									<li>
+										<a href="item-40.html" target="_blank">
+											<img src="upload/image/2018-03/29/pic_94c27a6e4a9177371de5ed7f3c08a2b5.png" alt="Java Web程序设计任务教程">
+										</a>
+									</li>
+									<li class="item-ads-name">
+										<a href="upload/image/2018-03/29/pic_94c27a6e4a9177371de5ed7f3c08a2b5.png" target="_blank">Java Web程序设计任务教程</a>
+									</li>
+									<li class="item-ads-price">¥56.00</li>
+								</ul>
+
+								<ul class="item-ads-item">
+									<li>
+										<a href="item-39.html" target="_blank">
+											<img src="upload/image/2018-03/29/pic_af5c03732dba5d473ed8d884a97cf1ae.jpg" alt="微服务架构基础（Spring Boot+Spring Cloud+Docker）">
+										</a>
+									</li>
+									<li class="item-ads-name">
+										<a href="upload/image/2018-03/29/pic_af5c03732dba5d473ed8d884a97cf1ae.jpg" target="_blank">微服务架构基础（Spring Boot+Spring Cloud+Docker）</a>
+									</li>
+									<li class="item-ads-price">¥35.00</li>
+								</ul>
+
+							</div>
+							<script id="item_ads_tpl" type="text/html">
+								{{each item v}}
+								<ul class="item-ads-item">
+									<li>
+										<a href="item-{{v.id}}.html" target="_blank">
+											<img src="{{v.pic}}" alt="{{v.title}}">
+										</a>
+									</li>
+									<li class="item-ads-name">
+										<a href="{{v.pic}}" target="_blank">{{v.title}}</a>
+									</li>
+									<li class="item-ads-price">¥{{v.price}}</li>
+								</ul>
+								{{/each}}
+							</script>
+						</div>
+						<div class="item-desc">
+							<div class="item-desc-title">商品详情</div>
+							<div class="item-desc-content">
+								<p><span style="color:rgb(156,156,156);font-family:Avenir, 'PingFang SC', 'Microsoft Yahei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;font-size:14px;background-color:rgb(255,255,255);">本书从初学者的角度出发，深刻且通俗地揭示了JavaWeb开发内幕。全书共15章，详细讲解了网页开发的基础知识和Java Web开发的重要知识，其中网页开发基础知识包括HTML技术、CSS技术和JavaScript技术，而Java Web的进阶知识包括Servlet技术、会话技术、JSP技术，以及JDBC和数据库连接池等技术。本书加入了真实的电商项目，揭示了项目开发的真实内幕，可以让学习者切身感受到项目开发带来的乐趣。</span><br><span style="color:rgb(156,156,156);font-family:Avenir, 'PingFang SC', 'Microsoft Yahei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;font-size:14px;background-color:rgb(255,255,255);">本书使用深入浅出、通俗易懂的语言阐述教材中涉及的概念，并通过结合典型翔实的Web应用案例、分析案例代码、解决常见问题等方式，帮助读者真正明白Web应用程序开发的全过程。</span><br><span style="color:rgb(156,156,156);font-family:Avenir, 'PingFang SC', 'Microsoft Yahei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;font-size:14px;background-color:rgb(255,255,255);">本书附有配套视频、源代码、习题、教学课件等资源；另外，为了帮助初学者更好地学习本书讲解的内容，还提供了在线答疑，希望得到更多读者的关注。</span><br><span style="color:rgb(156,156,156);font-family:Avenir, 'PingFang SC', 'Microsoft Yahei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;font-size:14px;background-color:rgb(255,255,255);">本书适合作为高等院校计算机相关专业程序设计或者Web项目开发的教材，是一本适合广大计算机编程爱好者的优秀读物。</span></p>
+							</div>
+						</div>
+						<div class="item-line"></div>
+					</div>
+					<script>
+						(function() {
+							var id = Common.id;
+							// 查询商品数据
+							$.get(Config.api + 'items/' + id, function(data) {
+								$.get(Config.api + 'categories?view=crumbs&id=' + data.cid, function(data) {
+									$('.crumbs').html(template('crumbs_tpl', {
+										item: data
+									}));
+								});
+								$('.item-info').html(template('item_info_tpl', {
+									item: data
+								}));
+								$('.item-desc-content').html(data.content);
+								Common.itemAlbumPath(data.album);
+								$('.album').html(template('album_tpl', {
+									item: data.album
+								})).album();
+								Common.itemPicPath(data.recommend);
+								$('.item-ads-content').html(template('item_ads_tpl', {
+									item: data.recommend
+								}));
+								loadSuccess();
+							}).fail(function() {
+								alert('商品数据不存在！');
+								location.href = 'index.html';
+							});
+
+							function loadSuccess() {
+								var num = $('#item_num');
+								var stock = parseInt($('.item-num-stock').text());
+								// 减少购买数量
+								$('.item-num-sub').click(function() {
+									var n = parseInt(num.val());
+									if(n < 1) {
+										return false;
+									}
+									num.val(n - 1);
+								});
+								// 增加购买数量
+								$('.item-num-add').click(function() {
+									var n = parseInt(num.val());
+									if(n > stock) {
+										return false;
+									}
+									num.val(n + 1);
+								});
+								// 自动纠正购买数量
+								num.keyup(function() {
+									var n = parseInt($(this).val());
+									if(n < 1) {
+										$(this).val(1);
+									} else if(n > stock) {
+										$(this).val(stock);
+									}
+								});
+								// 添加到购物车 
+								$('#cart_add').click(function() {
+									// 将 商品id 和 购买数量 添加到本地存储（如果存在，则增加数量）
+									Common.addCart(id, num.val());
+									alert('商品已成功加入购物车！');
+									location.href = 'cart.html';
+									return false;
+								});
+							}
+						})();
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

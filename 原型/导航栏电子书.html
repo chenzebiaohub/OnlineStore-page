@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="wrap">
+				<div id="content">
+					<div class="crumbs">
+						<a class="pjax" href="index.html">首页</a>
+
+						<i></i>
+						<a class="pjax" href="find-1.html">图书、音像、电子书刊</a>
+
+						<i></i>
+						<a class="pjax" href="find-2.html">电子书刊</a>
+
+						<i></i>
+						<a class="pjax" href="find-3.html">电子书</a>
+
+					</div>
+					<script id="crumbs_tpl" type="text/html">
+						<a class="pjax" href="index.html">首页</a>
+						{{each item v}}
+						<i></i>
+						<a class="pjax" href="find-{{v.id}}.html">{{v.name}}</a>
+						{{/each}}
+					</script>
+					<div class="find">
+						<div class="find-ad">
+							<div class="find-ad-title">相关商品推荐</div>
+							<div class="find-ad-content">
+
+								<ul class="find-ad-item">
+									<li>
+										<a href="item-1.html" target="_blank"><img src="img/preview.jpg" alt="1"></a>
+									</li>
+									<li class="find-ad-name">
+										<a href="item-1.html" target="_blank">1</a>
+									</li>
+									<li class="find-ad-price">¥100.00</li>
+								</ul>
+
+								<ul class="find-ad-item">
+									<li>
+										<a href="item-2.html" target="_blank"><img src="img/preview.jpg" alt="2"></a>
+									</li>
+									<li class="find-ad-name">
+										<a href="item-2.html" target="_blank">2</a>
+									</li>
+									<li class="find-ad-price">¥100.00</li>
+								</ul>
+
+								<ul class="find-ad-item">
+									<li>
+										<a href="item-3.html" target="_blank"><img src="img/preview.jpg" alt="3"></a>
+									</li>
+									<li class="find-ad-name">
+										<a href="item-3.html" target="_blank">3</a>
+									</li>
+									<li class="find-ad-price">¥100.00</li>
+								</ul>
+
+								<ul class="find-ad-item">
+									<li>
+										<a href="item-4.html" target="_blank"><img src="img/preview.jpg" alt="4"></a>
+									</li>
+									<li class="find-ad-name">
+										<a href="item-4.html" target="_blank">4</a>
+									</li>
+									<li class="find-ad-price">¥100.00</li>
+								</ul>
+
+								<ul class="find-ad-item">
+									<li>
+										<a href="item-5.html" target="_blank"><img src="img/preview.jpg" alt="5"></a>
+									</li>
+									<li class="find-ad-name">
+										<a href="item-5.html" target="_blank">5</a>
+									</li>
+									<li class="find-ad-price">¥100.00</li>
+								</ul>
+
+							</div>
+							<script id="find_ad_tpl" type="text/html">
+								{{each item v}}
+								<ul class="find-ad-item">
+									<li>
+										<a href="item-{{v.id}}.html" target="_blank"><img src="{{v.pic}}" alt="{{v.title}}"></a>
+									</li>
+									<li class="find-ad-name">
+										<a href="item-{{v.id}}.html" target="_blank">{{v.title}}</a>
+									</li>
+									<li class="find-ad-price">¥{{v.price}}</li>
+								</ul>
+								{{/each}}
+							</script>
+						</div>
+						<div class="find-ls">
+							<ul class="selector">
+								<li class="selector-title">商品列表</li>
+								<li class="selector-category">
+
+								</li>
+								<script id="selector_category_tpl" type="text/html">
+									{{if item.length > 0}}
+									<dl>
+										<dt>分类：</dt>
+										<dd>
+											{{each item v}}
+											<a class="pjax" href="find-{{v.id}}.html">{{v.name}}</a>
+											{{/each}}
+										</dd>
+									</dl>
+									{{/if}}
+								</script>
+								<li>
+									<dl>
+										<dt>价格：</dt>
+										<dd class="selector-price">
+											<a href="#" data-param="0-0" class="selector-curr">全部</a>
+
+											<a href="#" data-param="0-20">0-20</a>
+
+											<a href="#" data-param="21-40">21-40</a>
+
+											<a href="#" data-param="41-60">41-60</a>
+
+											<a href="#" data-param="61-80">61-80</a>
+
+											<a href="#" data-param="81-100">81-100</a>
+
+										</dd>
+										<script id="selector_price_tpl" type="text/html">
+											<a href="#" data-param="0-0">全部</a>
+											{{each item v}}
+											<a href="#" data-param="{{v}}">{{v}}</a>
+											{{/each}}
+										</script>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>排序：</dt>
+										<dd class="selector-sort">
+											<a href="#" data-param="id-desc" class="selector-curr">最新上架</a>
+											<a href="#" data-param="price-asc">价格升序</a>
+											<a href="#" data-param="price-desc">价格降序</a>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+							<div class="find-item">
+
+								<ul>
+									<li>
+										<a href="item-41.html" target="_blank"><img src="upload/image/2018-03/29/pic_9c34269665d881bb78d9d5ed2f477d5a.png" alt="响应式Web开发项目教程（HTML5+CSS3+Bootstrap）"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-41.html" target="_blank">响应式Web开发项目教程（HTML5+CSS3+Bootstrap）</a>
+									</li>
+									<li class="find-item-price">¥42.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-40.html" target="_blank"><img src="upload/image/2018-03/29/pic_94c27a6e4a9177371de5ed7f3c08a2b5.png" alt="Java Web程序设计任务教程"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-40.html" target="_blank">Java Web程序设计任务教程</a>
+									</li>
+									<li class="find-item-price">¥56.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-39.html" target="_blank"><img src="upload/image/2018-03/29/pic_af5c03732dba5d473ed8d884a97cf1ae.jpg" alt="微服务架构基础（Spring Boot+Spring Cloud+Docker）"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-39.html" target="_blank">微服务架构基础（Spring Boot+Spring Cloud+Docker）</a>
+									</li>
+									<li class="find-item-price">¥35.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-38.html" target="_blank"><img src="upload/image/2018-03/29/pic_6d1536a0236e2fa369c3bea7974e9895.jpg" alt="JavaScript前端开发案例教程"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-38.html" target="_blank">JavaScript前端开发案例教程</a>
+									</li>
+									<li class="find-item-price">¥49.80</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-37.html" target="_blank"><img src="upload/image/2018-03/29/pic_adce05daf581ff539097c13468ec050e.jpg" alt="Java EE企业级应用开发教程（Spring+Spring MVC+MyBatis）"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-37.html" target="_blank">Java EE企业级应用开发教程（Spring+Spring MVC+MyBatis）</a>
+									</li>
+									<li class="find-item-price">¥49.80</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-36.html" target="_blank"><img src="upload/image/2018-03/29/pic_009a5f85a77217e308fb1fce6e9f8f8b.jpg" alt="PHP基础案例教程"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-36.html" target="_blank">PHP基础案例教程</a>
+									</li>
+									<li class="find-item-price">¥49.80</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-35.html" target="_blank"><img src="upload/image/2018-03/29/pic_6906254983e4403df17eb21eabf048be.jpg" alt="新媒体营销教程"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-35.html" target="_blank">新媒体营销教程</a>
+									</li>
+									<li class="find-item-price">¥35.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-34.html" target="_blank"><img src="upload/image/2018-03/29/pic_1e361476ea9c429a38dd3624519c03c7.jpg" alt="Python快速编程入门"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-34.html" target="_blank">Python快速编程入门</a>
+									</li>
+									<li class="find-item-price">¥39.80</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-33.html" target="_blank"><img src="img/preview.jpg" alt="33"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-33.html" target="_blank">33</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-32.html" target="_blank"><img src="img/preview.jpg" alt="32"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-32.html" target="_blank">32</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-31.html" target="_blank"><img src="img/preview.jpg" alt="31"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-31.html" target="_blank">31</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-30.html" target="_blank"><img src="img/preview.jpg" alt="30"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-30.html" target="_blank">30</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-29.html" target="_blank"><img src="img/preview.jpg" alt="29"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-29.html" target="_blank">29</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-28.html" target="_blank"><img src="img/preview.jpg" alt="28"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-28.html" target="_blank">28</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-27.html" target="_blank"><img src="img/preview.jpg" alt="27"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-27.html" target="_blank">27</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-26.html" target="_blank"><img src="img/preview.jpg" alt="26"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-26.html" target="_blank">26</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-25.html" target="_blank"><img src="img/preview.jpg" alt="25"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-25.html" target="_blank">25</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-24.html" target="_blank"><img src="img/preview.jpg" alt="24"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-24.html" target="_blank">24</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-23.html" target="_blank"><img src="img/preview.jpg" alt="23"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-23.html" target="_blank">23</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a href="item-22.html" target="_blank"><img src="img/preview.jpg" alt="22"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-22.html" target="_blank">22</a>
+									</li>
+									<li class="find-item-price">¥100.00</li>
+								</ul>
+
+							</div>
+							<script id="find_item_tpl" type="text/html">
+								{{each item v}}
+								<ul>
+									<li>
+										<a href="item-{{v.id}}.html" target="_blank"><img src="{{v.pic}}" alt="{{v.title}}"></a>
+									</li>
+									<li class="find-item-name">
+										<a href="item-{{v.id}}.html" target="_blank">{{v.title}}</a>
+									</li>
+									<li class="find-item-price">¥{{v.price}}</li>
+								</ul>
+								{{/each}}
+							</script>
+							<div class="pagelist">
+								<span class="pagelist-first pagelist-none">首页</span>
+								<span class="pagelist-prev pagelist-none">上一页</span>
+								<div class="pagelist-nav"><span class="pagelist-curr">1</span><span class="pagelist-btn">2</span><span class="pagelist-btn">3</span></div>
+								<span class="pagelist-next pagelist-btn">下一页</span>
+								<span class="pagelist-last pagelist-btn">尾页</span>
+							</div>
+							<script src="js/jquery.page.js"></script>
+						</div>
+					</div>
+					<script>
+						(function() {
+							var params = {
+								price_max: 0,
+								price_min: 0,
+								sort: 'id-desc',
+								cid: Common.id,
+								page: 1,
+								pagesize: 20
+							};
+							// 商品分类面包屑导航
+							$.get(Config.api + 'categories?view=crumbs&id=' + params.cid, function(data) {
+								$('.crumbs').html(template('crumbs_tpl', {
+									item: data
+								}));
+							});
+							var isFirst = true;
+							loadData();
+
+							function loadData() {
+								// 请求列表数据
+								$.get(Config.api + 'items', params, function(data) {
+									Common.itemPicPath(data.item);
+									$('.find-item').html(template('find_item_tpl', {
+										item: data.item
+									}));
+									if(isFirst) {
+										isFirst = false;
+										firstLoadData(data);
+									}
+								});
+							}
+
+							function firstLoadData(data) {
+								// 推荐商品
+								Common.itemPicPath(data.recommend);
+								$('.find-ad-content').html(template('find_ad_tpl', {
+									item: data.recommend
+								}));
+								// 分类
+								$('.selector-category').html(template('selector_category_tpl', {
+									id: data.cid,
+									item: data.category
+								}));
+								// 价格
+								$('.selector-price').html(template('selector_price_tpl', {
+									item: priceDist(data.priceMax, 5)
+								})).find('a:first').addClass('selector-curr');
+								// 排序
+								$('.selector-sort a:first').addClass('selector-curr');
+								// 分页
+								var pagelist = $('.pagelist').page({
+									total: data.total,
+									size: params.pagesize
+								});
+								pagelist.click(function(page) {
+									params.page = page;
+									loadData();
+									$('html,body').animate({
+										scrollTop: $('#content').offset().top
+									}, 500);
+								});
+							}
+
+							function priceDist(max, count) {
+								if(max <= 0) {
+									return '';
+								}
+								var size = Math.ceil(max / Math.max(count, 1));
+								var end = size,
+									start = 0,
+									rst = [];
+								for(var i = 0; i < count; ++i) {
+									rst.push(start + '-' + end);
+									start = end + 1;
+									end += size;
+								}
+								return rst;
+							}
+							$('.selector-price').on('click', 'a', function() {
+								var param = $(this).attr('data-param');
+								params.price_max = param[0];
+								params.price_min = param[1];
+								loadData();
+								$(this).addClass('selector-curr').siblings().removeClass('selector-curr');
+								return false;
+							});
+							$('.selector-sort a').click(function() {
+								params.sort = $(this).attr('data-param');
+								loadData();
+								$(this).addClass('selector-curr').siblings().removeClass('selector-curr');
+								return false;
+							});
+						})();
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

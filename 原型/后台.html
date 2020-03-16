@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="jquery-easyui-1.5.4.2/themes/default/easyui.css" />
+		<link rel="stylesheet" href="jquery-easyui-1.5.4.2/themes/icon.css" />
+		<link rel="stylesheet" href="webuploader-0.1.5/webuploader.css" />
+		
+	</head>
+
+	<body class="easyui-layout layout panel-noscroll">
+		<div class="panel layout-panel layout-panel-west panel-htop layout-split-west" style="width: 195px; left: 0px; top: 0px;">
+			<div class="panel-header" style="width: 183px;">
+				<div class="panel-title">系统菜单</div>
+				<div class="panel-tool">
+					<a href="javascript:;" class="panel-tool-collapse" style="display: none;"></a>
+					<a href="javascript:;" class="layout-button-left"></a>
+				</div>
+			</div>
+			<div title="" data-options="region:'west',split:true,width:'200px'" class="panel-body layout-body" style="width: 193px; height: 295px;">
+				<ul id="menu" class="easyui-tree menutree tree">
+					<li>
+						<div id="_easyui_tree_1" class="tree-node"><span class="tree-hit tree-expanded"></span><span class="tree-icon tree-folder tree-folder-open "></span><span class="tree-title">首页管理</span></div>
+						<ul style="display:block">
+							<li>
+								<div id="_easyui_tree_2" class="tree-node tree-node-selected"><span class="tree-indent"></span><span class="tree-indent"></span><span class="tree-icon tree-file "></span><span class="tree-title">焦点图</span></div>
+							</li>
+							<li>
+								<div id="_easyui_tree_3" class="tree-node"><span class="tree-indent"></span><span class="tree-indent"></span><span class="tree-icon tree-file "></span><span class="tree-title">最新动态</span></div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div id="_easyui_tree_4" class="tree-node"><span class="tree-hit tree-expanded"></span><span class="tree-icon tree-folder tree-folder-open "></span><span class="tree-title">内容管理</span></div>
+						<ul style="display:block">
+							<li>
+								<div id="_easyui_tree_5" class="tree-node"><span class="tree-indent"></span><span class="tree-indent"></span><span class="tree-icon tree-file "></span><span class="tree-title">管理商品</span></div>
+							</li>
+							<li>
+								<div id="_easyui_tree_6" class="tree-node"><span class="tree-indent"></span><span class="tree-indent"></span><span class="tree-icon tree-file "></span><span class="tree-title">管理分类</span></div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div id="_easyui_tree_7" class="tree-node"><span class="tree-hit tree-expanded"></span><span class="tree-icon tree-folder tree-folder-open "></span><span class="tree-title">系统管理</span></div>
+						<ul style="display:block">
+							<li>
+								<div id="_easyui_tree_8" class="tree-node"><span class="tree-indent"></span><span class="tree-indent"></span><span class="tree-icon tree-file "></span><span class="tree-title">用户退出</span></div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="panel layout-panel layout-panel-center panel-htop" style="width: 1166px; left: 200px; top: 0px;">
+			<div data-options="region:'center'" title="" class="panel-body panel-body-noheader layout-body panel-noscroll" id="" style="width: 1164px; height: 322px;">
+				<div id="tabs" class="easyui-tabs tabs-container easyui-fluid" data-options="border:false,fit:true" style="width: 1164px; height: 322px;">
+
+					<div class="tabs-header tabs-header-noborder" style="width: 1164px;">
+						<div class="tabs-scroller-left" style="display: none;"></div>
+						<div class="tabs-scroller-right" style="display: none;"></div>
+						<div class="tabs-wrap" style="margin-left: 0px; margin-right: 0px; width: 1164px;">
+							<ul class="tabs" style="height: 26px;">
+								<li class="tabs-first">
+									<a href="javascript:;" class="tabs-inner" style="height: 25px; line-height: 25px;"><span class="tabs-title">首页</span><span class="tabs-icon"></span></a>
+								</li>
+								<li class="">
+									<a href="javascript:;" class="tabs-inner" style="height: 25px; line-height: 25px;"><span class="tabs-title tabs-closable">最新动态</span><span class="tabs-icon"></span></a>
+									<a href="javascript:;" class="tabs-close"></a>
+								</li>
+								<li class="tabs-last tabs-selected">
+									<a href="javascript:;" class="tabs-inner" style="height: 25px; line-height: 25px;"><span class="tabs-title tabs-closable">焦点图</span><span class="tabs-icon"></span></a>
+									<a href="javascript:;" class="tabs-close"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tabs-panels tabs-panels-noborder" style="height: 293px; width: 1164px;">
+						<div class="panel panel-htop" style="display: none; width: 1164px;">
+							<div title="" class="content panel-body panel-body-noheader panel-body-noborder" id="" style="width: 1134px; height: 273px;">
+								<p>欢迎来到商城后台管理系统！</p>
+								<p>请从左侧选择一个操作。</p>
+							</div>
+						</div>
+						<div class="panel panel-htop" style="display: none; width: 1164px;">
+							<div title="" class="panel-body panel-body-noheader panel-body-noborder content panel-noscroll" id="" style="width: 1134px; height: 273px;">
+								<div class="panel datagrid panel-htop easyui-fluid" style="width: 1134px;">
+									<div class="panel-header" style="width: 1122px;">
+										<div class="panel-title">最新动态</div>
+										<div class="panel-tool">
+											<a href="javascript:;" class="panel-tool-collapse"></a>
+										</div>
+									</div>
+									<div class="datagrid-wrap panel-body" title="" style="width: 1132px; height: 244px;">
+										<div class="datagrid-toolbar">
+											<table cellspacing="0" cellpadding="0">
+												<tbody>
+													<tr>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">刷新</span><span class="l-btn-icon icon-reload">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<div class="datagrid-btn-separator"></div>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">新增</span><span class="l-btn-icon icon-add">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">编辑</span><span class="l-btn-icon icon-edit">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">删除</span><span class="l-btn-icon icon-cancel">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<div class="datagrid-btn-separator"></div>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">上架</span><span class="l-btn-icon icon-ok">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">下架</span><span class="l-btn-icon icon-no">&nbsp;</span></span>
+															</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="datagrid-view" style="width: 1132px; height: 213px;">
+											<div class="datagrid-view1" style="width: 0px;">
+												<div class="datagrid-header" style="width: 0px; height: 24px;">
+													<div class="datagrid-header-inner" style="display: block;">
+														<table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 25px;">
+															<tbody></tbody>
+														</table>
+													</div>
+												</div>
+												<div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 188px;">
+													<div class="datagrid-body-inner"></div>
+												</div>
+												<div class="datagrid-footer" style="width: 0px;">
+													<div class="datagrid-footer-inner" style="display: none;"></div>
+												</div>
+											</div>
+											<div class="datagrid-view2" style="width: 1132px;">
+												<div class="datagrid-header" style="width: 1132px; height: 24px;">
+													<div class="datagrid-header-inner" style="display: block;">
+														<table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 25px;">
+															<tbody>
+																<tr class="datagrid-header-row">
+																	<td field="checkbox" class="">
+																		<div class="datagrid-header-check"><input type="checkbox"></div>
+																	</td>
+																	<td field="title" class="">
+																		<div class="datagrid-cell datagrid-cell-c5-title"><span>动态标题</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="color" class="">
+																		<div class="datagrid-cell datagrid-cell-c5-color" style=""><span>标题颜色</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="sort">
+																		<div class="datagrid-cell datagrid-cell-c5-sort" style="text-align: right;"><span>排序</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="status">
+																		<div class="datagrid-cell datagrid-cell-c5-status" style="text-align: center;"><span>状态</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="created">
+																		<div class="datagrid-cell datagrid-cell-c5-created" style="text-align: center;"><span>创建日期</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="updated">
+																		<div class="datagrid-cell datagrid-cell-c5-updated" style="text-align: center;"><span>更新日期</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="datagrid-body" style="width: 1132px; margin-top: 0px; height: 188px; overflow-x: hidden;">
+													<table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0">
+														<tbody>
+															<tr id="datagrid-row-r5-2-0" datagrid-row-index="0" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-title">7天学会EUI电商设计</div>
+																</td>
+																<td field="color">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-color"></div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c5-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r5-2-1" datagrid-row-index="1" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-title">5天入门软件测试</div>
+																</td>
+																<td field="color">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-color"></div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c5-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r5-2-2" datagrid-row-index="2" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-title">大数据hadoop入门精讲</div>
+																</td>
+																<td field="color">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-color"></div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c5-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r5-2-3" datagrid-row-index="3" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-title">视觉设计路线图上线了</div>
+																</td>
+																<td field="color">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-color"></div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c5-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r5-2-4" datagrid-row-index="4" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-title">20小时入门学会go语言</div>
+																</td>
+																<td field="color">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-color"></div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c5-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r5-2-5" datagrid-row-index="5" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-title">学习java就这么简单</div>
+																</td>
+																<td field="color">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-color"></div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c5-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r5-2-6" datagrid-row-index="6" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-title">新媒体营销策划系列课程</div>
+																</td>
+																<td field="color">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-color"></div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c5-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r5-2-7" datagrid-row-index="7" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-title">初识前端与移动开发</div>
+																</td>
+																<td field="color">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c5-color"></div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c5-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c5-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="datagrid-footer" style="width: 1132px;">
+													<div class="datagrid-footer-inner" style="display: none;"></div>
+												</div>
+											</div>
+											<table id="news_list" title="最新动态" class="datagrid-f" style="display: none;"></table>
+											<style type="text/css" easyui="true">
+												.datagrid-header-rownumber {
+													width: 29px
+												}
+												
+												.datagrid-cell-rownumber {
+													width: 29px
+												}
+												
+												.datagrid-cell-c5-title {
+													width: 191px
+												}
+												
+												.datagrid-cell-c5-color {
+													width: 91px
+												}
+												
+												.datagrid-cell-c5-sort {
+													width: 41px
+												}
+												
+												.datagrid-cell-c5-status {
+													width: 51px
+												}
+												
+												.datagrid-cell-c5-created {
+													width: 121px
+												}
+												
+												.datagrid-cell-c5-updated {
+													width: 121px
+												}
+											</style>
+										</div>
+									</div>
+								</div>
+								<div id="news_edit_window" data-options="closed:true,width:'440px',height:'260px',modal:true,maximizable:false,iconCls:'icon-save'" style="display:none">
+									<form method="post" style="margin:10px">
+										<table cellpadding="5">
+											<tbody>
+												<tr>
+													<td>动态标题：</td>
+													<td><input name="title" data-options="required:true,validType:'length[0,80]',width:'280px'"></td>
+												</tr>
+												<tr>
+													<td>链接地址：</td>
+													<td><input name="url" data-options="required:true,width:'280px'"></td>
+												</tr>
+												<tr>
+													<td>标题颜色：</td>
+													<td><input name="color" data-options="width:'140px'"></td>
+												</tr>
+												<tr>
+													<td>排序值：</td>
+													<td><input name="sort" data-options="required:true,min:-99999,max:99999,precision:0,width:'140px'"></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td style="padding-top:15px;">
+														<input type="hidden" name="status" value="1">
+														<a class="easyui-linkbutton news-edit-save l-btn l-btn-small" data-options="width:'80px',height:'30px'" href="#" group="" id="" style="position: static; display: inline-block; left: auto; width: 78px; height: 28px;"><span class="l-btn-left" style="margin-top: 2px;"><span class="l-btn-text">保存草稿</span></span>
+														</a>
+														<a class="easyui-linkbutton news-edit-submit l-btn l-btn-small" data-options="width:'90px',height:'30px'" href="#" group="" id="" style="position: static; display: inline-block; left: auto; width: 88px; height: 28px;"><span class="l-btn-left" style="margin-top: 2px;"><span class="l-btn-text">保存并上架</span></span>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</form>
+								</div>
+								<!--<script src="js/jquery.color.js"></script>-->
+								
+							</div>
+						</div>
+						<div class="panel panel-htop" style="display: block; width: 1164px;">
+							<div title="" class="panel-body panel-body-noheader panel-body-noborder content panel-noscroll" style="width: 1134px; height: 273px;">
+								<div class="panel datagrid panel-htop easyui-fluid" style="width: 1134px;">
+									<div class="panel-header" style="width: 1122px;">
+										<div class="panel-title">焦点图</div>
+										<div class="panel-tool">
+											<a href="javascript:;" class="panel-tool-collapse"></a>
+										</div>
+									</div>
+									<div class="datagrid-wrap panel-body" title="" style="width: 1132px; height: 244px;">
+										<div class="datagrid-toolbar">
+											<table cellspacing="0" cellpadding="0">
+												<tbody>
+													<tr>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">刷新</span><span class="l-btn-icon icon-reload">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<div class="datagrid-btn-separator"></div>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">新增</span><span class="l-btn-icon icon-add">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">编辑</span><span class="l-btn-icon icon-edit">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">删除</span><span class="l-btn-icon icon-cancel">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<div class="datagrid-btn-separator"></div>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">上架</span><span class="l-btn-icon icon-ok">&nbsp;</span></span>
+															</a>
+														</td>
+														<td>
+															<a href="javascript:;" class="l-btn l-btn-small l-btn-plain" group="" id=""><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">下架</span><span class="l-btn-icon icon-no">&nbsp;</span></span>
+															</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="datagrid-view" style="width: 1132px; height: 213px;">
+											<div class="datagrid-view1" style="width: 0px;">
+												<div class="datagrid-header" style="width: 0px; height: 24px;">
+													<div class="datagrid-header-inner" style="display: block;">
+														<table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 25px;">
+															<tbody></tbody>
+														</table>
+													</div>
+												</div>
+												<div class="datagrid-body" style="width: 0px; margin-top: 0px; height: 188px;">
+													<div class="datagrid-body-inner"></div>
+												</div>
+												<div class="datagrid-footer" style="width: 0px;">
+													<div class="datagrid-footer-inner" style="display: none;"></div>
+												</div>
+											</div>
+											<div class="datagrid-view2" style="width: 1132px;">
+												<div class="datagrid-header" style="width: 1132px; height: 24px;">
+													<div class="datagrid-header-inner" style="display: block;">
+														<table class="datagrid-htable" border="0" cellspacing="0" cellpadding="0" style="height: 25px;">
+															<tbody>
+																<tr class="datagrid-header-row">
+																	<td field="checkbox">
+																		<div class="datagrid-header-check"><input type="checkbox"></div>
+																	</td>
+																	<td field="title" class="">
+																		<div class="datagrid-cell datagrid-cell-c6-title"><span>图片名称</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="sort" class="">
+																		<div class="datagrid-cell datagrid-cell-c6-sort" style="text-align: right;"><span>排序</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="status">
+																		<div class="datagrid-cell datagrid-cell-c6-status" style="text-align: center;"><span>状态</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="created" class="">
+																		<div class="datagrid-cell datagrid-cell-c6-created" style="text-align: center;"><span>创建日期</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																	<td field="updated" class="">
+																		<div class="datagrid-cell datagrid-cell-c6-updated" style="text-align: center;"><span>更新日期</span><span class="datagrid-sort-icon"></span></div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="datagrid-body" style="width: 1132px; margin-top: 0px; height: 188px; overflow-x: hidden;">
+													<table class="datagrid-btable" cellspacing="0" cellpadding="0" border="0">
+														<tbody>
+															<tr id="datagrid-row-r6-2-0" datagrid-row-index="0" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c6-title">图片1</div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c6-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r6-2-1" datagrid-row-index="1" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c6-title">图片2</div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c6-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r6-2-2" datagrid-row-index="2" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c6-title">图片3</div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c6-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+															<tr id="datagrid-row-r6-2-3" datagrid-row-index="3" class="datagrid-row">
+																<td field="checkbox">
+																	<div style="" class="datagrid-cell-check"><input type="checkbox" name="checkbox" value=""></div>
+																</td>
+																<td field="title">
+																	<div style="height:auto;" class="datagrid-cell datagrid-cell-c6-title">图片4</div>
+																</td>
+																<td field="sort">
+																	<div style="text-align:right;height:auto;" class="datagrid-cell datagrid-cell-c6-sort">0</div>
+																</td>
+																<td field="status">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-status">正常</div>
+																</td>
+																<td field="created">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-created">2018-03-15 18:31:55</div>
+																</td>
+																<td field="updated">
+																	<div style="text-align:center;height:auto;" class="datagrid-cell datagrid-cell-c6-updated">2018-03-15 18:31:55</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="datagrid-footer" style="width: 1132px;">
+													<div class="datagrid-footer-inner" style="display: none;"></div>
+												</div>
+											</div>
+											<table id="slide_list" title="焦点图" class="datagrid-f" style="display: none;"></table>
+											<style type="text/css" easyui="true">
+												.datagrid-header-rownumber {
+													width: 29px
+												}
+												
+												.datagrid-cell-rownumber {
+													width: 29px
+												}
+												
+												.datagrid-cell-c6-title {
+													width: 191px
+												}
+												
+												.datagrid-cell-c6-sort {
+													width: 41px
+												}
+												
+												.datagrid-cell-c6-status {
+													width: 51px
+												}
+												
+												.datagrid-cell-c6-created {
+													width: 121px
+												}
+												
+												.datagrid-cell-c6-updated {
+													width: 121px
+												}
+											</style>
+										</div>
+									</div>
+								</div>
+								<div id="slide_edit_window" data-options="closed:true,width:'440px',height:'380px',modal:true,maximizable:false,iconCls:'icon-save'" style="display:none">
+									<form method="post" style="margin:10px">
+										<table cellpadding="5">
+											<tbody>
+												<tr>
+													<td>图片名称：</td>
+													<td><input name="title" data-options="required:true,validType:'length[0,80]',width:'280px'"></td>
+												</tr>
+												<tr>
+													<td>链接地址：</td>
+													<td><input name="url" data-options="required:true,width:'280px'"></td>
+												</tr>
+												<tr>
+													<td>排序值：</td>
+													<td><input name="sort" data-options="required:true,min:-99999,max:99999,precision:0,width:'140px'"></td>
+												</tr>
+												<tr>
+													<td>上传图片：</td>
+													<td>
+														<div class="upload_pic">
+															<div class="webuploader-list" style="width:280px;"></div>
+															<div class="webuploader-file-picker">选择图片</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+													<td style="padding-top:15px;">
+														<input type="hidden" name="status" value="1">
+														<a class="easyui-linkbutton slide-edit-save l-btn l-btn-small" data-options="width:'80px',height:'30px'" href="#" group="" id="" style="position: static; display: inline-block; left: auto; width: 78px; height: 28px;"><span class="l-btn-left" style="margin-top: 2px;"><span class="l-btn-text">保存草稿</span></span>
+														</a>
+														<a class="easyui-linkbutton slide-edit-submit l-btn l-btn-small" data-options="width:'90px',height:'30px'" href="#" group="" id="" style="position: static; display: inline-block; left: auto; width: 88px; height: 28px;"><span class="l-btn-left" style="margin-top: 2px;"><span class="l-btn-text">保存并上架</span></span>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</form>
+								</div> f
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="layout-split-proxy-h"></div>
+		<div class="layout-split-proxy-v"></div>
+	</body>
+
+</html>
